@@ -8,6 +8,21 @@
     <script src="https://cdn.staticfile.net/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.net/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>jh-zn</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .app-card {
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #ffffff;
+        }
+        .app-card h3 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
      <div class="container">
@@ -31,7 +46,11 @@
                 appjson = data;
                 var html = "";
                 for (var i = 0; i < appjson.length; i++) {
-                    html+="<h3>"+i+" "+appjson[i].name+"</h3><p>"+appjson[i].description+"</p><a href='"+appjson[i].url+"'>Download</a>";
+                    html += "<div class='app-card'>";
+                    html += "<h3>" + (i + 1) + ". " + appjson[i].name + "</h3>";
+                    html += "<p>" + appjson[i].description + "</p>";
+                    html += "<a class='btn btn-primary' href='" + appjson[i].url + "'>Download</a>";
+                    html += "</div>";
                 }
                 $(".apps").append(html);
             });
