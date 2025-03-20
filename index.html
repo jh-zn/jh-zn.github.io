@@ -67,6 +67,7 @@
             var appjson;
             $.getJSON("app.json", function(data) {
                 appjson = data;
+                console.log(appjson);
                 var html = "";
                 for (var i = 0; i < appjson.length; i++) {
                     html += "<div class='app-card'>";
