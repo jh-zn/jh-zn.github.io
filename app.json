@@ -1,12 +1,12 @@
 [
     {
         "name": "demo",
-        "description":"",
+        "description":"启动程序",
         "url": "https://jh-zn.github.io/dlls/demo.exe"
     },
     {
         "name": "first",
-        "description":"",
+        "description":"第一个测试dll",
         "url": "https://jh-zn.github.io/dlls/frist.dll"
     }
 ]
