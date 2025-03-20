@@ -10,17 +10,33 @@
     <title>jh-zn</title>
 </head>
 <body>
-    <div class="container">
+     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center">Welcome to jh-zn's homepage</h1>
+                <h1 class="text-left">Welcome to jh-zn app store</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="text-center">This is a simple homepage for jh-zn.</p>
+                <p class="text-center">app list</p>
+                <div class="apps">
+
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            var appjson;
+            $.getJSON("app.json", function(data) {
+                appjson = data;
+                var html = "";
+                for (var i = 0; i < appjson.length; i++) {
+                    html += "<div class='col-md-4'><div class='card'><div class='card-body'><h5 class='card-title'>" + appjson[i].name + "</h5><p class='card-text'>" + appjson[i].description + "</p><a href='" + appjson[i].url + "' class='btn btn-primary'>Go</a></div></div></div>";
+                }
+                $(".apps").append(html);
+            });
+        });
+    </script>
 </body>
 </html>
