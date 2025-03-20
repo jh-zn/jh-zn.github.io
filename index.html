@@ -20,10 +20,11 @@
             margin-bottom: 1rem;
             background-color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         .app-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .app-card h3 {
             margin-top: 0;
@@ -35,19 +36,23 @@
         .app-card a {
             color: #ffffff;
         }
+        .loading {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .loading img {
+            width: 50px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-left">apps</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
                 <div class="apps">
-
+                    <div class="loading">
+                        <img src="loading.gif" alt="Loading...">
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,7 +70,9 @@
                     html += "<a class='btn btn-primary' href='" + appjson[i].url + "'>Download</a>";
                     html += "</div>";
                 }
-                $(".apps").append(html);
+                $(".apps").html(html); // 替换内容而不是追加
+            }).fail(function() {
+                $(".apps").html("<p class='text-danger'>Failed to load data.</p>");
             });
         });
     </script>
