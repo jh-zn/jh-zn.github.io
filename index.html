@@ -32,7 +32,7 @@
                 appjson = data;
                 var html = "";
                 for (var i = 0; i < appjson.length; i++) {
-                    html += "<div class='col-md-4'><div class='card'><div class='card-body'><h5 class='card-title'>" + appjson[i].name + "</h5><p class='card-text'>" + appjson[i].description + "</p><a href='" + appjson[i].url + "' class='btn btn-primary'>Go</a></div></div></div>";
+                    html+="<h3>"+appjson[i].name+"</h3>+<p>"+appjson[i].description+"</p>+<a href='"+appjson[i].url+"'>Download</a>";
                 }
                 $(".apps").append(html);
             });
