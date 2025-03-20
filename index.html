@@ -11,6 +11,7 @@
     <style>
         body {
             background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
         }
         .app-card {
             border: 1px solid #dee2e6;
@@ -18,14 +19,31 @@
             padding: 1rem;
             margin-bottom: 1rem;
             background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
         }
         .app-card h3 {
             margin-top: 0;
+            color: #007bff;
+        }
+        .app-card p {
+            color: #6c757d;
+        }
+        .app-card a {
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
-     <div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-left">apps</h1>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="apps">
