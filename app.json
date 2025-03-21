@@ -1,17 +1,7 @@
 [
     {
-        "name": "demo",
-        "description":"启动程序",
-        "url": "https://jh-zn.github.io/dlls/demo.exe"
-    },
-    {
-        "name": "first",
-        "description":"第一个测试dll",
-        "url": "https://jh-zn.github.io/dlls/frist.dll"
-    },
-    {
-        "name": "second",
-        "description":"第二个测试dll",
-        "url": "https://jh-zn.github.io/dlls/second.dll"
+        "name": "热成像温度监控",
+        "description":"深圳晶恒宇环境科技有限公司",
+        "url": "https://jh-zn.github.io/dlls/com.szjhyhj.infrared.dll"
     }
 ]
