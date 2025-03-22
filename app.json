@@ -9,5 +9,10 @@
         "name": "热成像温度监控",
         "description":"深圳晶恒宇环境科技有限公司",
         "url": "https://jh-zn.github.io/dlls/com.szjhyhj.infrared.dll"
+    },
+    {
+        "name": "热成像温度监控",
+        "description":"深圳晶恒宇环境科技有限公司",
+        "url": "https://jh-zn.github.io/dlls/com.jh-zn.ledger.dll"
     }
 ]
